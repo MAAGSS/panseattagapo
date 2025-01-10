@@ -60,14 +60,7 @@
                         <span class="text-red-500 text-sm">{{ $message }}</span>
                     @enderror
 
-                    <input
-                        id="password_confirmation"
-                        type="password"
-                        name="password_confirmation"
-                        placeholder="Confirm Password"
-                        class="login-input block mt-4 w-full p-4 border-2 border-gray-300 rounded-lg mb-4 focus:border-[#4A7C59] transition duration-300"
-                        required
-                    />
+                    
 
                     <div class="mt-4">
                         <label for="role" class="block font-medium text-sm text-gray-700">Register as</label>
