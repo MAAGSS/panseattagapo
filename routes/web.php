@@ -6,7 +6,13 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\StaffController;
+<<<<<<< HEAD
 
+=======
+use App\Http\Controllers\BundleController;
+use App\Models\Bundle;
+use App\Models\User;
+>>>>>>> master
 // Public Routes
 Route::get('/', function () {
     return view('welcome');
@@ -21,8 +27,18 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::middleware(['auth'])->group(function () {
     // Dashboard Route
     Route::get('/dashboard', function () {
+<<<<<<< HEAD
         return view('dashboard');
     })->name('dashboard');
+=======
+        $bundles = Bundle::all(); // Retrieve all bundles from the database
+        $users = User::all(); 
+        return view('dashboard', compact('bundles', 'users')); // Pass the bundles to the view
+    })->name('dashboard');
+    Route::post('/bundles', [BundleController::class, 'store'])->name('bundles.store');
+    Route::post('/admin/staff', [StaffController::class, 'store'])->name('staff.store'); 
+
+>>>>>>> master
     
 
     // Profile Routes
@@ -45,7 +61,11 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/staff', [StaffController::class, 'index'])->name('staff.index'); // View staff list
     Route::get('/admin/staff/create', [StaffController::class, 'create'])->name('staff.create'); // Add staff
+<<<<<<< HEAD
     Route::post('/admin/staff', [StaffController::class, 'store'])->name('staff.store'); // Store new staff
+=======
+    // Store new staff
+>>>>>>> master
     Route::get('/admin/staff/{staff}/edit', [StaffController::class, 'edit'])->name('staff.edit'); // Edit staff
     Route::put('/admin/staff/{staff}', [StaffController::class, 'update'])->name('staff.update'); // Update staff
     Route::delete('/admin/staff/{staff}', [StaffController::class, 'destroy'])->name('staff.destroy'); // Delete staff
