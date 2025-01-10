@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<x-app-layout>
-    <div class="flex min-h-screen bg-cream">
-=======
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <x-app-layout>
 <div class="flex min-h-screen bg-cream">
->>>>>>> master
         <!-- Sidebar -->
         <aside class="w-1/4 bg-light-cream flex flex-col p-6">
             <h1 class="text-green text-2xl font-bold mb-6">PansEat Tagapo</h1>
@@ -31,10 +26,7 @@
             <!-- Header -->
             <header class="flex items-center justify-between mb-6">
                 <h2 class="text-green text-xl font-bold">Dashboard</h2>
-<<<<<<< HEAD
-=======
                 <div>{{ Auth::user()->name }}</div>
->>>>>>> master
                 <a href="{{ route('logout') }}" 
                     class="text-yellow font-medium hover:underline"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -49,25 +41,9 @@
             <section id="calendar" class="mb-10">
                 <h3 class="text-orange text-lg font-bold mb-4">Calendar</h3>
                 <div class="bg-yellow p-6 rounded-lg shadow-md">
-<<<<<<< HEAD
-                    <h4 class="text-red text-2xl font-bold mb-4">2024</h4>
-                    <div class="grid grid-cols-7 gap-2 text-center text-green font-medium">
-                        <div>Sunday</div>
-                        <div>Monday</div>
-                        <div>Tuesday</div>
-                        <div>Wednesday</div>
-                        <div>Thursday</div>
-                        <div>Friday</div>
-                        <div>Saturday</div>
-                        <!-- Calendar Placeholder -->
-                        <div class="col-span-7 bg-light-cream rounded-lg p-4 text-orange">
-                            3:00 PM – Birthday
-                        </div>
-=======
                     
                     <div class="grid grid-cols-7 gap-2 text-center text-green font-medium">
                         
->>>>>>> master
                     </div>
                 </div>
             </section>
@@ -92,14 +68,6 @@
             <section id="bundles" class="mb-10">
                 <h3 class="text-green text-lg font-bold mb-4">Bundles</h3>
                 <div class="bg-light-green p-6 rounded-lg shadow-md">
-<<<<<<< HEAD
-                    <p class="text-green">Add bundle features here for managing restaurant bundles.</p>
-                </div>
-            </section>
-        </main>
-    </div>
-</x-app-layout>
-=======
                     <button 
                         class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-600 transition duration-200"
                         onclick="openModal('addBundleModal')">
@@ -371,4 +339,3 @@ function closeModal(modalId) {
         });
     });
 </script>
->>>>>>> master
