@@ -254,7 +254,7 @@
 
             <div class="mt-4">
                 <button type="submit" class="login-button w-full bg-[#FFD166] text-[#4A7C59] py-4 rounded-lg font-bold transition duration-300 hover:bg-[#ffc107]">
-                    Signup
+                    Add Staff
                 </button>
             </div>
 
